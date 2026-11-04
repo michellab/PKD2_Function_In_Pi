@@ -1,9 +1,10 @@
 # PKD2_Function_In_Pi
 
-Simulation inputs, analysis notebooks and representative structures for
-*TRPP Ion Channels Function in the π-Conformation Rather Than the α-Conformation*.
+Simulation inputs, analysis notebooks and representative structures for the paper "TRPP Ion Channels Function in the π-Conformation Rather Than the α-Conformation" by Chenfeng Zhang, Wojciech Kopec and Julien Michel.
 
 Systems follow Supplementary Table S1 and simulation sets follow Supplementary Table S2.
+
+Trajectories supporting the main conclusions, with a reduced number of frames, are available on Zenodo (https://doi.org/10.5281/zenodo.23946105).
 
 ## Layout
 

@@ -8,7 +8,7 @@
 ;;
 
 ; Include forcefield parameters
-#include "toppar_ECC0.75/forcefield_new.itp"
+#include "toppar_ECC0.75/forcefield.itp"
 #include "toppar_ECC0.75/PROA.itp"
 #include "toppar_ECC0.75/PROB.itp"
 #include "toppar_ECC0.75/PROC.itp"
