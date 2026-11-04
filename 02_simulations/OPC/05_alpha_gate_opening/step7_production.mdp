@@ -1,0 +1,48 @@
+define                  = -DPOSRES_ca_pore_helix -DPOSRES_ca_fc_xy=0 -DPOSRES_ca_fc_z=1000 -DDIHERS_PORE_BB -DPORE_BB_DIHRES_FC=200 -DDIHERS_PORE_F676_CHI1 -DF676_CHI1_FC=100
+integrator              = md
+tinit                   = 0
+dt                      = 0.002
+nsteps                  = 250000000
+nstxout-compressed      = 50000
+nstxout                 = 0
+nstvout                 = 0
+nstfout                 = 0
+nstcalcenergy           = 1000
+nstenergy               = 5000
+nstlog                  = 5000
+;
+cutoff-scheme           = Verlet
+nstlist                 = 100
+rlist                   = 0.9
+vdwtype                 = Cut-off
+vdw-modifier            = None
+DispCorr                = EnerPres
+rvdw                    = 0.9
+coulombtype             = PME
+rcoulomb                = 0.9
+;
+tcoupl                  = v-rescale
+tc_grps                 = SOLU MEMB SOLV
+tau_t                   = 1.0 1.0 1.0
+ref_t                   = 310 310 310
+;
+pcoupl                  = C-rescale
+pcoupltype              = semiisotropic
+tau_p                   = 5.0
+compressibility         = 4.5e-5  4.5e-5
+ref_p                   = 1.0     1.0
+refcoord_scaling        = com
+;
+constraints             = h-bonds
+constraint_algorithm    = LINCS
+continuation            = no
+;
+gen-vel                 = yes
+gen-temp                = 310
+gen-seed                = -1
+;
+nstcomm                 = 1000
+comm_mode               = linear
+comm_grps               = SOLU_MEMB SOLV
+;
+electric-field-z        = -0.02 0 0 0
